@@ -99,3 +99,20 @@ h3 { font-size: 15px; margin: 0 0 10px; }
 .audit-card p { margin: 8px 0; color: #5e6c69; font-size: 12px; }
 .audit-card small { color: #8b9794; font-size: 11px; }
 .empty-state { padding: 80px; text-align: center; color: #71807d; }
+.role-bar { display: flex; gap: 8px; align-items: center; margin-bottom: 14px; font-size: 12px; color: #63726f; }
+.role-bar button { border: 1px solid #d5dedb; background: #fff; padding: 6px 12px; cursor: pointer; border-radius: 3px; font-size: 12px; color: #41504d; }
+.role-bar button.active { border-color: #1c5a60; background: #edf6f4; color: #15434a; font-weight: 600; }
+.role-bar small { color: #8a9794; }
+.merge-banner { background: #fdf3e3; border: 1px solid #ecd9ae; color: #7a5b1c; padding: 9px 12px; font-size: 12px; border-radius: 4px; margin-bottom: 14px; }
+.table-hint { font-size: 11px; color: #8a9794; margin: -4px 0 10px; }
+.stopped-cell { display: flex; gap: 8px; align-items: center; }
+.link-btn { border: 0; background: none; color: #1c5a60; cursor: pointer; font-size: 12px; text-decoration: underline; padding: 0; }
+.review-panel { border: 1px solid #ecd9ae; background: #fffaef; border-radius: 5px; padding: 14px 16px; margin-top: 18px; font-size: 12px; }
+.review-panel strong { font-size: 13px; }
+.review-panel p { color: #6f6852; margin: 6px 0 8px; }
+.review-panel ul { margin: 0 0 10px; padding-left: 18px; color: #5e5642; line-height: 1.8; }
+.demo-box { border: 1px dashed #c3cfcc; border-radius: 5px; padding: 12px; display: grid; gap: 8px; font-size: 12px; color: #63726f; }
+.demo-box strong { font-size: 12px; }
+.demo-box button { border: 1px solid #d5dedb; background: #fff; padding: 7px 10px; cursor: pointer; border-radius: 3px; font-size: 12px; color: #41504d; }
+.demo-box label { display: flex; gap: 6px; align-items: center; font-size: 12px; }
+.audit-tags { display: flex; gap: 6px; align-items: center; }

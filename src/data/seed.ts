@@ -27,7 +27,9 @@ export const seedRecords: InspectionRecord[] = [
   {
     id: 'INS-240821-04', deviceCode: 'WF-003', deviceName: '摩天轮', area: '湖景区', shift: '早班', inspector: '赵帆',
     inspectedAt: '2026-09-27T07:55:00', status: '已关闭', risk: '低', stopped: false, assignedTo: '维修二组', dueDate: '2026-09-28',
-    items: standardItems(), evidenceCount: 5, version: 5, createdAt: '2026-09-27T07:55:00', updatedAt: '2026-09-28T16:20:00'
+    items: standardItems(), evidenceCount: 5, version: 5,
+    closureBasis: { closedAt: '2026-09-28T16:20:00', version: 5, items: standardItems() },
+    createdAt: '2026-09-27T07:55:00', updatedAt: '2026-09-28T16:20:00'
   }
 ]
 
