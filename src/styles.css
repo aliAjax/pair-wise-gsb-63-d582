@@ -99,3 +99,27 @@ h3 { font-size: 15px; margin: 0 0 10px; }
 .audit-card p { margin: 8px 0; color: #5e6c69; font-size: 12px; }
 .audit-card small { color: #8b9794; font-size: 11px; }
 .empty-state { padding: 80px; text-align: center; color: #71807d; }
+
+/* —— 乐观提交 / 双角色 / 复测与关闭复核 —— */
+.role-band { margin-bottom: 14px; }
+.role-switch { display: flex; gap: 8px; margin-bottom: 10px; }
+.role-switch button { flex: 1; padding: 9px 12px; border: 1px solid #c5d0cc; background: #fff; border-radius: 4px; cursor: pointer; font-size: 13px; color: #4c5a57; }
+.role-switch button.active { background: #1f6f5c; border-color: #1f6f5c; color: #fff; font-weight: 600; }
+.version-band { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 4px; background: #eef5f2; font-size: 12px; color: #4c5a57; flex-wrap: wrap; }
+.version-band.stale { background: #fdf3ec; border: 1px solid #f0c089; }
+.stale-alert { margin-bottom: 14px; }
+.conflict-list { margin: 6px 0 0; padding-left: 18px; }
+.conflict-list li { margin: 3px 0; }
+.field-conflict { color: #c0473c; font-style: normal; font-size: 11px; margin-left: 6px; }
+h3 small { font-weight: 400; color: #8a9693; font-size: 12px; margin-left: 8px; }
+.save-bar { margin-top: 16px; display: flex; justify-content: flex-end; }
+.retest-panel, .closure-panel { margin-top: 22px; border-top: 1px dashed #cfd8d5; padding-top: 14px; }
+.retest-row { display: flex; align-items: center; gap: 14px; padding: 10px 4px; border-bottom: 1px solid #eef1f0; font-size: 13px; flex-wrap: wrap; }
+.retest-row > div:first-child { display: flex; align-items: center; gap: 8px; min-width: 220px; }
+.retest-row > span { color: #5c6b68; }
+.retest-actions { margin-left: auto; display: flex; gap: 8px; }
+.recheck-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+.recheck-table th, .recheck-table td { border: 1px solid #dde4e1; padding: 7px 10px; text-align: left; }
+.recheck-table th { background: #f4f7f5; color: #63726f; }
+.recheck-table .danger { color: #c0473c; font-weight: 600; }
+.form-band label i { display: block; }

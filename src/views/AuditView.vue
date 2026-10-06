@@ -19,7 +19,11 @@ const entries = computed(() => store.audit.filter((item) => !keyword.value || `$
         <div class="time">{{ entry.createdAt.replace('T', ' ').slice(0, 16) }}</div>
         <i />
         <div class="audit-card">
-          <header><strong>{{ entry.action }}</strong><NTag size="small" :bordered="false">{{ entry.recordId }}</NTag></header>
+          <header>
+            <strong>{{ entry.action }}</strong>
+            <NTag size="small" :bordered="false">{{ entry.recordId }}</NTag>
+            <NTag size="small" type="info" :bordered="false">{{ entry.commitId.split('-').slice(0, 3).join('-') }}</NTag>
+          </header>
           <p>{{ entry.detail }}</p>
           <small>操作人：{{ entry.operator }}</small>
         </div>

@@ -32,6 +32,9 @@ export function createOfflineInspection(draft: InspectionDraft): InspectionRecor
       { id: 'safety', name: '安全装置', result: '正常', reading: '待录入', limit: '动作可靠', note: '' }
     ],
     evidenceCount: 0,
+    retests: [],
+    closure: null,
+    recheck: [],
     version: 1,
     createdAt: now,
     updatedAt: now

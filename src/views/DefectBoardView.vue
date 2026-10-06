@@ -1,14 +1,26 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { NButton, NTag } from 'naive-ui'
+import { NButton, NTag, useMessage } from 'naive-ui'
 import { useInspectionStore } from '../stores/inspection'
 
 const store = useInspectionStore()
 const router = useRouter()
+const message = useMessage()
 const columns = ['需整改', '整改中', '待复测', '已关闭'] as const
 const riskOrder = { 紧急: 0, 高: 1, 中: 2, 低: 3 }
 const grouped = computed(() => Object.fromEntries(columns.map((status) => [status, store.records.filter((item) => item.status === status).sort((a, b) => riskOrder[a.risk] - riskOrder[b.risk])])))
+
+function adjustConflictWorkOrder() {
+  const target = store.records.find((item) => item.id === 'INS-240821-02')
+  if (!target) return
+  const result = store.submitSupervisorDisposition(target.id, {
+    operator: '值班负责人·郑海',
+    baseVersion: target.version,
+    assignedTo: '检验二组'
+  })
+  result.ok ? message.success(result.message) : message.error(result.message)
+}
 </script>
 
 <template>
@@ -32,7 +44,7 @@ const grouped = computed(() => Object.fromEntries(columns.map((status) => [statu
     <div class="conflict-table">
       <h3>资源冲突提示</h3>
       <p>早班维修一组同时承担高空飞翔紧急整改和家庭过山车复测，系统建议将后者调整至电气班组，避开开放高峰。</p>
-      <button @click="store.updateRecord('INS-240821-02', { assignedTo: '检验二组' }, '调整冲突工单')">调整冲突工单</button>
+      <button @click="adjustConflictWorkOrder">调整冲突工单</button>
     </div>
   </section>
 </template>
